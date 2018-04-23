@@ -314,6 +314,17 @@
 					"default": true,
 					"description": "Show or hide the Explorer."
 				},
+				"docker.TagName" : {
+					"type":"string",
+					"default":"latest",
+					"description": "description"
+				},
+				"docker.Owner" : {
+					"type":"string",
+					"default":"chakibmed",
+					"description": "the owner of those docker images"
+				},
+				
 				"docker.explorerRefreshInterval": {
 					"type": "number",
 					"default": 1000,

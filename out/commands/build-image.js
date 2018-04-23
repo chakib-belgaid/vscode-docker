@@ -104,12 +104,17 @@ function buildImage(dockerFileUri) {
                 imageName = folder.uri.fsPath.split('/').pop().toLowerCase();
             }
         }
+        let tagName = vscode.workspace.getConfiguration('docker').get('TagName');
+        //vscode.window.showInformationMessage("lalala"+tagName);
+        if ( ! tagName)  tagName = "latest" ; 
+        let Owner = vscode.workspace.getConfiguration('docker').get('Owner');
+        if ( ! Owner)  Owner = "chakibmed" ; 
         let dirname =path.basename(folder.uri.fsPath).toLowerCase();
-        imageName =(dirname != imageName ) ?  "chakibmed/"+dirname+'_' + imageName:"chakibmed/" + imageName ; 
+        imageName =(dirname != imageName ) ?  Owner+"/"+dirname+'_' + imageName:Owner+"/" + imageName ; 
         const opt = {
-            placeHolder: imageName + ':latest',
+            placeHolder: imageName +":"+ tagName,
             prompt: 'Tag image as...',
-            value: imageName + ':latest'
+            value: imageName +":"+ tagName,
         };
         const value = yield vscode.window.showInputBox(opt);
         if (!value)

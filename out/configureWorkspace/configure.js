@@ -54,8 +54,8 @@ EXPOSE ${port}
 COPY $source .
 ENTRYPOINT dotnet ${serviceName}.dll
 `;
-case 'powerpai':
-return `
+        case 'powerpai':
+            return `
 FROM chakibmed/powerapi:latest
 LABEL Name=${serviceName} Version=${version}
 ADD . .
@@ -392,7 +392,7 @@ function configure() {
     return __awaiter(this, void 0, void 0, function* () {
         let folder;
         let folder1;
-        
+
         if (vscode.workspace.workspaceFolders && vscode.workspace.workspaceFolders.length === 1) {
             folder = vscode.workspace.workspaceFolders[0];
         }
@@ -414,20 +414,20 @@ function configure() {
         const port = yield config_utils_1.promptForPort();
         if (!port)
             return;
-             let serviceName1;
-            if (vscode.window.activeTextEditor && vscode.window.activeTextEditor.document) {
-    
-                let x = vscode.window.activeTextEditor.document.fileName;
-                serviceName1 = path.basename(path.dirname(x)).toLowerCase();
-                folder1 = path.dirname(x);
-            }
-            else {
-                serviceName1 = path.basename(folder.uri.fsPath).toLowerCase();
-            }
-            const serviceName = serviceName1;
-       
-            
-        const serviceName = path.basename(folder.uri.fsPath).toLowerCase();
+        let serviceName1;
+        if (vscode.window.activeTextEditor && vscode.window.activeTextEditor.document) {
+
+            let x = vscode.window.activeTextEditor.document.fileName;
+            serviceName1 = path.basename(path.dirname(x)).toLowerCase();
+            folder1 = path.dirname(x);
+        }
+        else {
+            serviceName1 = path.basename(folder.uri.fsPath).toLowerCase();
+        }
+        const serviceName = serviceName1;
+
+
+        //const serviceName = path.basename(folder.uri.fsPath).toLowerCase();
         let pkg = getDefaultPackageJson();
         if (platformType.toLowerCase() === 'java') {
             pkg = yield readPomOrGradle(folder);
@@ -463,7 +463,7 @@ function configure() {
                 if (path.basename(workspacePath) == "Dockerfile") {
                     vscode.window.showTextDocument(vscode.Uri.file(workspacePath));
                 }
-                
+
             });
         }
     });
