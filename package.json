@@ -1,9 +1,9 @@
 {
-	"name": "vscode-docker",
+	"name": "vscode-docker-perso",
 	"version": "0.0.26",
-	"publisher": "PeterJausovec",
+	"publisher": "chiko",
 	"displayName": "Docker",
-	"description": "Adds syntax highlighting, commands, hover tips, and linting for Dockerfile and docker-compose files.",
+	"description": "personal modifications ",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"icon": "images/docker_icon.png",
 	"aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
@@ -12,10 +12,7 @@
 		"theme": "dark"
 	},
 	"categories": [
-		"Languages",
-		"Linters",
-		"Azure"
-	],
+],
 	"keywords": [
 		"docker",
 		"compose",
@@ -23,7 +20,7 @@
 		"multi-root ready"
 	],
 	"repository": {
-		"url": "https://github.com/microsoft/vscode-docker.git"
+		"url": "https://github.com/chakib-belgaid/vscode-docker.git"
 	},
 	"homepage": "https://github.com/Microsoft/vscode-docker/blob/master/README.md",
 	"activationEvents": [
@@ -628,8 +625,8 @@
 		"vscode-languageclient": "^3.5.0-next.4"
 	},
 	"__metadata": {
-		"id": "0479fc1c-3d67-49f9-b087-fb9069afe48f",
-		"publisherId": "bc3f1075-3ced-4395-9b1b-3f0ecaee83be",
-		"publisherDisplayName": "Microsoft"
+		"id": "0479fc1c-3d67-49f9-b087-fb9069afe48f1",
+		"publisherId": "bc3f1075-3ced-4395-9b1b-3f0ecaee83be1",
+		"publisherDisplayName": "chiko"
 	}
 }

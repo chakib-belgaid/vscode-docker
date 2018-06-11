@@ -1,3 +1,5 @@
+This is a personilized version of the extention vscode-docker, it contains some chnages from the original version to suits my needs , afterall this is the beauty of the opensource , and in anyways i'm appropriating to this work , 
+
 # Docker Support for Visual Studio Code
 The Docker extension makes it easy to build and deploy containerized applications from Visual Studio Code. 
 
